@@ -1,0 +1,19 @@
+# Caches
+__pycache__/
+.pytest_cache
+
+# Environment
+.python-version
+.venv
+.env
+.kaggle
+.vscode
+
+# Jupyter notebooks
+notebooks
+
+# Artifacts
+logs
+data
+models
+docs

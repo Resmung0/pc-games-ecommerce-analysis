@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "pc-games-ecommerce-analysis"
+version = "0.1.0"
+description = "Sentiment analysis of some Brazilian PC video game e-commerces"
+authors = ["Marcos Gabriel Guimarães de Assis <mg.21191077@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "pc_games_ecommerce_analysis"}]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "3.12.4"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+commitizen = "^3.28.0"
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "poetry"
+update_changelog_on_bump = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
