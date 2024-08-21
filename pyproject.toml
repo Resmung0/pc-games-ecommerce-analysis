@@ -18,12 +18,25 @@ ipykernel = "^6.29.5"
 commitizen = "^3.28.0"
 
 
+
+[tool.poetry.group.etl.dependencies]
+scrapy = "^2.11.2"
+scrapy-user-agents = "^0.1.1"
+beautifulsoup4 = "^4.12.3"
+pandas = "^2.2.2"
+
 [tool.commitizen]
 name = "cz_conventional_commits"
 tag_format = "$version"
 version_scheme = "semver"
 version_provider = "poetry"
 update_changelog_on_bump = true
+
+[tool.poe.tasks]
+commit = "cz commit"
+
+[tool.mypy]
+ignore_missing_imports = true
 
 [build-system]
 requires = ["poetry-core"]
